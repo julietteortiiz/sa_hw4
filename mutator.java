@@ -7,7 +7,7 @@
 //https://www.w3schools.com/java/java_bufferedreader.asp
 //https://www.geeksforgeeks.org/java/iterate-over-the-characters-of-a-string-in-java/
 
-import java.nio.file.File;
+import java.nio.file.Files;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -42,19 +42,10 @@ public class mutator {
     }
 
     public static void main(String[] args){
-        
-        createMutant("mutants/m1.java", '>', '<');
-        createMutant("mutants/m2.java", '<', '>');
-        createMutant("mutants/m3.java", '+', '-');
-        createMutant("mutants/m4.java", '-', '+');
-
-        File[] files = mutants.listFiles();
-
-        for (File file : files) {
-
-            System.out.println(file.getAbsolutePath());
-        }
-
+        createMutant("m1/BuyTicket.java", '>', '<');
+        createMutant("m2/BuyTicket.java", '<', '>');
+        createMutant("m3/BuyTicket.java", '+', '-');
+        createMutant("m4/BuyTicket.java", '-', '+');
 
     }
 
